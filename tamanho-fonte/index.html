@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumenta e Diminui fonte da página web</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="container">
+
+		<br>
+
+		<div class="float-right">
+			<button type="button" id="btnAumentarFonte" class="btn btn-success">A+</button>
+		    <button type="button" id="btnDiminuirFonte" class="btn btn-primary">A-</button>    
+		</div>
+
+	    <br>
+	    <br>
+
+	    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus in ornare quam viverra orci sagittis eu volutpat odio.</p>
+
+	    <p>Vel eros donec ac odio. Arcu odio ut sem nulla pharetra diam sit.</p>
+
+	    <p>Non odio euismod lacinia at. Eget mauris pharetra et ultrices neque. Dictumst quisque sagittis purus sit. Massa vitae tortor condimentum lacinia quis vel. Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. Morbi tempus iaculis urna id volutpat lacus. Eget velit aliquet sagittis id. Mattis pellentesque id nibh tortor id aliquet lectus.</p>
+
+		<p>Sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Turpis egestas integer eget aliquet nibh praesent tristique magna. Elit pellentesque habitant morbi tristique senectus et netus et malesuada. Blandit libero volutpat sed cras ornare.</p>
+
+	</div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+	    var $btnAumentarFonte = $("#btnAumentarFonte");
+	    var $btnDiminuirFonte = $("#btnDiminuirFonte");
+	    var $elemento = $("body");
+
+	    function retornaTamanhoFonte() {
+	        return parseFloat($elemento.css('font-size'));
+	    }
+
+	    $btnAumentarFonte.on('click', function () {
+	        $elemento.css('font-size', retornaTamanhoFonte() + 1);
+	    });
+
+	    $btnDiminuirFonte.on('click', function () {
+	        $elemento.css('font-size', retornaTamanhoFonte() - 1);
+	    });
+    </script>
+</body>
+
+</html>
